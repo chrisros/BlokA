@@ -40,7 +40,7 @@ public class Helicopter extends Actor
         {
             World world = getWorld();
             world.addObject(new Explosion(), getX(), getY());
-            world.removeObject(this); // remove helicpter from world
+            world.removeObject(this); // remove helicopter from world
             //Sky.gameOver(); //call gameover 
         }
     }
