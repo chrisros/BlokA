@@ -41,7 +41,7 @@ public class Helicopter extends Actor
             World world = getWorld();
             world.addObject(new Explosion(), getX(), getY());
             world.removeObject(this); // remove helicopter from world
-            //Sky.gameOver(); //call gameover 
+            gameOver(); //call gameover 
         }
     }
     
@@ -60,6 +60,11 @@ public class Helicopter extends Actor
             world.addObject(new Bullet(), (getX()+25), (getY()+15));
             reloadDelay = 0;
         }
+    }
+    
+    private void gameOver(){
+       // Delay(50); 
+        Greenfoot.stop();
     }
     
     public void act() 
